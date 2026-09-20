@@ -1,7 +1,7 @@
 package model;
 
 import service.ClientService;
-
+import model.Compte;
 import java.util.HashMap;
 
 public class Client extends Personne {
@@ -30,6 +30,11 @@ public Client(String nom, String prenom, String email, String motDePasse, int id
     public void setIdClient(int idClient) {
         this.idClient = idClient;
     }
+
+    public void ajouterCompte(Compte compte){
+        comptes.put(compte.getNumeroCompte(),compte);
+    }
+
 
 
 }
